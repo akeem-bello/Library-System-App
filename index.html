@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Library System</title>
+        <link rel="stylesheet" href="index.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/73203e632d.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body onload="getExistingBooks()">
+        <div class="container p-1 mt-5 pr-5">
+            <div id="div1">
+                <h3>Akeem's Library</h3>
+
+                <div class="row mt-5">
+                    <div class="col-6">
+                        <p>Name</p>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" id="title" placeholder="Book Title">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <p>Author</p>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" id="author" placeholder="Author">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <p>Category</p>
+                    </div>
+                    <div class="col-6">
+                        <select id="type">
+                            <option value="Finance">Finance</option>
+                            <option value="Health">Health</option>
+                            <option value="Entrepreneurship">Entrepreneurship</option>
+                            <option value="History">History</option>
+                        </select> 
+                    </div>
+                </div>
+
+                <div class="row p-4 mb-5">
+                    <div class="col-6">
+                        <button class="btn btn-success" id="addButton" onclick="addBooks()">Add Book</button>
+                    </div>
+
+                    <div class="col-6">
+                        <button class="btn btn-danger" id="clearButton" onclick="clearBooks()" style="width: 130px;">Clear Library</button>
+                    </div>
+                </div>
+                
+                <h3>My Books</h3>
+                <div class="row p-3">
+                   <div class="col-6">
+                       <h6>TITLE</h6>
+                   </div>
+                   <div class="col-3">
+                       <h6>AUTHOR</h6>
+                   </div>
+                   <div class="col-2">
+                       <h6>TYPE</h6>
+                   </div>
+                </div>
+
+                <div id="addedBooks"></div>
+
+                <div>
+                    <p>You have <span id="bookCount"></span> book(s) in your library.</p>
+                </div>
+            </div>
+
+            <p id="p2"><strong>© 2022. Developed by AkeemBello</strong></p>
+        </div>
+
+
+
+        <script src="index.js"></script>
+    </body>
+</html>
